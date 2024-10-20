@@ -5,8 +5,6 @@
     </header>
   </div>
   <div class="layout-container">
-
-
     <div class="content-area" (click)="isSidebarOpen = false">
       <aside class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen}" *ngIf="isSidebarOpen">
         <app-sidebar [isSidebarOpen]="isSidebarOpen" [isMobileView]="isMobileView" (sidebarClose)="closeSidebar()">
@@ -22,7 +20,5 @@
         </footer>
       </main>
     </div>
-
-
   </div>
 </div>

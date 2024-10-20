@@ -10,6 +10,10 @@ import { ChannelOverviewComponent } from './channel-overview/channel-overview.co
 import { AccountsOverviewComponent } from './accounts-overview/accounts-overview.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ChartModule } from 'primeng/chart';
+import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ChartModule,
+    TableModule,
+    TagModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
