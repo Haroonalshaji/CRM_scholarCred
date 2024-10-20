@@ -1,0 +1,31 @@
+<div class="sidebar" [ngClass]="{'hidden-mobile': !isSidebarOpen, 'open': isSidebarOpen}">
+    <nav class="p-4">
+      <!-- Close button for mobile view
+      <button class="close-btn" *ngIf="isMobileView" (click)="closeSidebar($event)">Close</button> -->
+  
+      <ul class="list-none p-0" *ngIf="!isMobileView || isSidebarOpen">
+        <!-- Hide items in mobile view when sidebar is closed -->
+        <li class="nav-cards mb-4">
+          <i class="pi pi-home mr-2"></i>Dashboard
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-users mr-2"></i>All Students
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-briefcase mr-2"></i>Team Management
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-dollar mr-2"></i>Accounts
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-megaphone mr-2"></i>Campaigns
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-ticket mr-2"></i>Tickets
+        </li>
+        <li class="nav-cards mb-4">
+          <i class="pi pi-exclamation-triangle mr-2"></i>Escalations
+        </li>
+      </ul>
+    </nav>
+  </div>

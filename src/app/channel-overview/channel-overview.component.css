@@ -1,0 +1,47 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.content-parent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+
+.left-div {
+    flex: 1;
+    min-width: 300px;
+    align-content: center;
+}
+
+.right-div {
+    flex: 0 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.donut-chart-container {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .content-parent {
+        flex-direction: column;
+    }
+
+    .left-div,
+    .right-div {
+        width: 100%;
+    }
+}
