@@ -1,1 +1,58 @@
-<p>accounts-overview works!</p>
+<!-- <div class="product-list">
+    <div class="product-item" *ngFor="let item of products; let first = first">
+        <div class="product-content" [ngClass]="{ 'border-top': !first }"
+            style="display: flex; gap: 1rem; padding: 1rem;">
+
+            <div class="product-image" style="position: relative; width: 10rem;">
+                <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image"
+                    alt="{{ item.name }}" style="width: 100%; border-radius: 8px;" />
+                <div class="inventory-status" [ngClass]="getSeverity(item)"
+                    style="position: absolute; top: 4px; left: 4px; padding: 0.2rem 0.5rem; background-color: #fff; border-radius: 0.5rem; box-shadow: 0px 1px 4px rgba(0,0,0,0.1);">
+                    {{ item.inventoryStatus }}
+                </div>
+            </div>
+
+            <div class="product-details"
+                style="flex: 1; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <span class="product-category" style="color: #6c757d; font-size: 0.875rem;">{{ item.category
+                        }}</span>
+                    <div class="product-name" style="font-size: 1.25rem; font-weight: 700;">{{ item.name }}</div>
+                    <div class="rating"
+                        style="display: flex; align-items: center; gap: 0.25rem; background-color: #f1f1f1; padding: 0.25rem 0.5rem; border-radius: 1.5rem;">
+                        <span style="font-size: 0.875rem; font-weight: 600;">{{ item.rating }}</span>
+                        <i class="pi pi-star-fill" style="color: #fbbf24;"></i>
+                    </div>
+                </div>
+
+
+                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;">
+                    <span class="product-price" style="font-size: 1.5rem; font-weight: 700;">${{ item.price }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="p-grid accounts-overview-container">
+    <div *ngFor="let account of accountsData" class="p-col-12 p-md-4">
+        <div class="account-card p-shadow-2">
+            <div class="account-icon">
+                <i class="{{ account.icon }}"></i>
+            </div>
+            <div class="account-details">
+                <div class="details">
+                    <h3>{{ account.label }}</h3>
+                    <p>{{ account.description }}</p>
+                </div>
+                <div class="amount">
+                    <h2 [ngClass]="{
+                        'text-green': account.label === 'Payments Received',
+                        'text-blue': account.label === 'Receivables/Open Invoices',
+                        'text-red': account.label === 'Outward Payment'
+                      }">{{ account.amount }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

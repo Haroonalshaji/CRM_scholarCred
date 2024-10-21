@@ -1,46 +1,43 @@
-/* Footer container */
 .footer {
-    background-color: #00A6D9; /* ScholarCred color */
-    color: #ffffff;            /* White text */
-    padding: 20px 0;           /* Space around content */
-    text-align: center;        /* Center align text */
+    background-color: #00A6D9;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
     font-family: 'Manrope', sans-serif;
 }
 
-/* Flexbox layout for content */
+
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;         /* Maximum width for content */
-    margin: 0 auto;            /* Center the content */
-    padding: 0 20px;           /* Padding for mobile responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Footer left side (Copyright) */
+
 .footer-left p {
     margin: 0;
     font-size: 14px;
 }
 
-/* Footer right side (Developer details) */
 .footer-right p {
     margin: 0;
     font-size: 14px;
 }
 
 .footer-right strong {
-    color: #ffffff;            /* Highlight developer name */
+    color: #ffffff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
     }
 
-    .footer-left, .footer-right {
+    .footer-left,
+    .footer-right {
         margin-bottom: 10px;
     }
 }
-    

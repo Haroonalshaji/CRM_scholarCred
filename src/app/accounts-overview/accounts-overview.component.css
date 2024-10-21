@@ -1,0 +1,65 @@
+.accounts-overview-container {
+    .account-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgb(247, 247, 247);
+        }
+
+        .account-icon {
+            font-size: 3rem;
+            color: #007ad9;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .account-details {
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+
+            :is(h3) {
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            :is(h2) {
+                font-size: 1.25rem;
+                color: #2ecc71;
+            }
+
+            :is(p) {
+                font-size: 1rem;
+                color: #999;
+                text-align: start;
+            }
+
+            .text-green {
+                color: #2ecc71;
+            }
+
+            .text-blue {
+                color: #007ad9;
+            }
+
+            .text-red {
+                color: #e74c3c;
+            }
+        }
+    }
+}
+
+@media (min-width: 426px) {
+    .details {
+        :is(h3) {
+            font-size: 0.8rem;
+        }
+    }
+}

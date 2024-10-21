@@ -1,76 +1,46 @@
 /* Sidebar styles */
 .sidebar {
-    height: 100%;
-    width: 250px;
-    /* Fixed sidebar width */
-    background-color: #f4f4f4;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    /* Sidebar shadow */
-    transition: transform 0.3s ease;
-    /* Smooth transition */
-    position: relative;
-    /* Positioning context */
+  height: 100%;
+  width: 250px; 
+  background-color: #5fb9d4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  transform: translateX(-100%);
+  z-index: 9; 
+}
+
+
+.nav-cards {
+  border: 1px solid #00A6D9;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  color: rgb(71, 71, 71);
+  background-color: whitesmoke;
+  transition: all 0.3s ease-in-out; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-cards:hover {
+  background-color: #005872;
+  padding: 1rem; 
+  border-radius: 1.25rem; 
+  color: whitesmoke;
+  transform: scale(1.05); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+
+.sidebar.open {
+  transform: translateX(0); 
+}
+
+
+@media (max-width: 1024px) {
+  .sidebar {
+      position: absolute; 
+      z-index: 9; 
   }
-  
-  
-  /* .nav-cards:hover{
-    background-color: #44aacaaf;
-    padding: 0.75rem;
-    border-radius: 1rem;
-    color: whitesmoke;
-    transition: transform 0.2s ease;
-  } */
-  
-  .nav-cards {
-    border: 1px solid #00A6D9;
-    padding: 0.75rem;
-    border-radius: 1rem;
-    color: rgb(71, 71, 71);
-    background-color: whitesmoke;
-    transition: all 0.3s ease-in-out;
-    /* Smooth transition for all properties */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Add shadow on normal state */
-  }
-  
-  .nav-cards:hover {
-    background-color: #005872;
-    padding: 1rem;
-    /* Slightly larger padding on hover */
-    border-radius: 1.25rem;
-    /* Slightly larger radius */
-    color: whitesmoke;
-    transform: scale(1.05);
-    /* Zoom in slightly on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    /* Enhance shadow for depth */
-  }
-  
-  
-  
-  .hidden-mobile {
-    transform: translateX(-100%);
-    /* Hide the sidebar */
-  }
-  
-  .open {
-    transform: translateX(0);
-    /* Show the sidebar */
-  }
-  
-  /* Responsive behavior */
-  @media (max-width: 1024px) {
-    .sidebar {
-      position: absolute;
-      /* Sidebar over content */
-      transform: translateX(-100%);
-      /* Hidden by default on mobile */
-      z-index: 9;
-      /* Ensure it's above other content */
-    }
-  
-    .sidebar.open {
-      transform: translateX(0);
-      /* Show sidebar when toggled */
-    }
-  }
+}

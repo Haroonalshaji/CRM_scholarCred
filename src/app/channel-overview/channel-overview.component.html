@@ -1,15 +1,45 @@
 <div class="parent">
-    <div>
+    <!-- <div>
         CHANNEL-OVERVIEW
-    </div>
+    </div> -->
     <div class="content-parent">
         <div class="left-div">
-            <p-chart type="bar" class="chart" [data]="data" [options]="options" style="height:20rem"></p-chart>
+            <div id="chart">
+                <apx-chart
+                  [series]="chartOptions.series"
+                  [chart]="chartOptions.chart"
+                  [xaxis]="chartOptions.xaxis"
+                  [stroke]="chartOptions.stroke"
+                  [tooltip]="chartOptions.tooltip"
+                  [dataLabels]="chartOptions.dataLabels"
+                  [legend]="chartOptions.legend"
+                  [markers]="chartOptions.markers"
+                  [grid]="chartOptions.grid"
+                  [yaxis]="chartOptions.yaxis"
+                  [title]="chartOptions.title"
+                ></apx-chart>
+              </div>
+              
+            <!-- <p-chart type="bar" class="chart" [data]="data" [options]="options" style="height:20rem"></p-chart> -->
         </div>
         <div class="right-div">
             <div class="donut-chart-container">
                 <!-- <p-chart type="doughnut" [data]="donutdata" [options]="dnutoptions" /> -->
-                <p-chart type="pie" [data]="donutdata" [options]="dnutoptions" />
+                <!-- <p-chart type="pie" [data]="donutdata" [options]="dnutoptions" /> -->
+                <div id="chart1">
+                    <apx-chart
+                      [series]="chartOptions1.series1"
+                      [chart]="chartOptions1.chart"
+                      [labels]="chartOptions1.labels"
+                      [title]="chartOptions1.title"
+                      [theme]="chartOptions1.theme"
+                      [fill]="chartOptions1.fill"
+                      [yaxis]="chartOptions1.yaxis"
+                      [stroke]="chartOptions1.stroke"
+                      [legend]="chartOptions1.legend"
+                      [plotOptions]="chartOptions1.plotOptions"
+                    ></apx-chart>
+                  </div>
             </div>
         </div>
     </div>

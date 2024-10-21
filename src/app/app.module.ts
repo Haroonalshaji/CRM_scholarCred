@@ -14,6 +14,10 @@ import { ChartModule } from 'primeng/chart';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
+import { DataViewModule } from 'primeng/dataview';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { ButtonModule } from 'primeng/button';  
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { RatingModule } from 'primeng/rating';
     ChartModule,
     TableModule,
     TagModule,
-    RatingModule
+    RatingModule,
+    NgApexchartsModule,
+    DataViewModule,
+    CommonModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
