@@ -17,7 +17,7 @@
 .layout-container {
     display: flex;
     flex-direction: row; 
-    height: 88vh; 
+    height: 87vh; 
     overflow: hidden; 
 }
 
