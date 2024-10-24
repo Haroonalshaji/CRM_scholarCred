@@ -5,13 +5,13 @@
     </header>
   </div>
   <div class="layout-container">
-    <div class="content-area" (click)="isSidebarOpen = false">
+    <div class="content-area">
       <aside class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen}">
         <app-sidebar [isSidebarOpen]="isSidebarOpen" [isMobileView]="isMobileView" >
         </app-sidebar>
       </aside>
 
-      <main class="main-content" [ngClass]="{'content-shifted': isSidebarOpen}">
+      <main class="main-content"  (click)="isSidebarOpen = false" [ngClass]="{'content-shifted': isSidebarOpen}">
         <app-staff-perf></app-staff-perf>
         <app-channel-overview></app-channel-overview>
         <app-accounts-overview></app-accounts-overview>
